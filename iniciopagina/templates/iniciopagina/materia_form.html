@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Nueva materia</h1>
+    <nav>
+      <a href="{% url 'inicio' %}">Inicio</a> |
+      <a href="{% url 'lista_materias' %}">Lista de materias</a>
+    </nav>
+
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Guardar</button>
+    </form>
+  </body>
+</html>

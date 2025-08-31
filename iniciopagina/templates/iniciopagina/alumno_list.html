@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Alumnos</title></head>
+<body>
+  <h1>Listado de alumnos</h1>
+  <ul>
+    {% for alumno in alumnos %}
+      <li>{{ alumno.nombre }} – {{ alumno.email }}</li>
+    {% empty %}
+      <li>No hay alumnos registrados</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'crear_alumno' %}">Crear nuevo alumno</a>
+</body>
+</html>
